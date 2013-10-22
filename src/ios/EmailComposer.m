@@ -15,6 +15,10 @@
 #import "EmailComposer.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 
+#ifndef __has_feature
+# define __has_feature(x) 0
+#endif
+
 @interface EmailComposer ()
 
 -(void) showEmailComposerWithParameters:(NSDictionary*)parameters;
@@ -129,7 +133,9 @@
     } else {
         [self returnWithCode:RETURN_CODE_EMAIL_NOTSENT];
     }
+#if !__has_feature(objc_arc)
     [mailComposer release];
+#endif
 }
 
 
