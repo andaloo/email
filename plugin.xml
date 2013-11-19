@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-    id="cc.fovea.andaloo.emailcomposer"
+    id="org.andaloo.plugins.email"
     version="1.0.1">
 
-    <name>Email Composer</name>
+    <name>Andaloo Email Plugin</name>
 	<license>MIT</license>
 	
     <engines>
@@ -18,10 +18,8 @@
 
     <!-- ios -->
     <platform name="ios">
-        <!-- Cordova 2.2 -->
-        <plugins-plist key="EmailComposer" string="EmailComposer" />
                     
-        <!-- Cordova 2.5+ -->
+        <!-- Cordova 3+ -->
         <config-file target="config.xml" parent="/*">
             <feature name="EmailComposer" value="EmailComposer"/>
         </config-file>
